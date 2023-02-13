@@ -5,4 +5,4 @@ controllers:
     type: attribute
 app_cadavre:
     path: /cadavre/generator
-    controller: App\Controller\CadavreController::createCadavre
+    controller: App\Controller\CadavreController::index

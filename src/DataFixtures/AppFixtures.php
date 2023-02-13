@@ -211,7 +211,7 @@ class AppFixtures extends Fixture
         $manager->persist($complement7);
 
         $complement8 = new Francais();
-        $complement8->setGroupeDeMots("quand les poules auront des dents");
+        $complement8->setGroupeDeMots("dans les bois");
         $complement8->setFonction("complement");
         $manager->persist($complement8);
 
@@ -236,7 +236,7 @@ class AppFixtures extends Fixture
         $manager->persist($complement13);
 
         $complement14 = new Francais();
-        $complement14->setGroupeDeMots("observant les massifs montagneux");
+        $complement14->setGroupeDeMots("en observant les massifs montagneux");
         $complement14->setFonction("complement");
         $manager->persist($complement14);
 

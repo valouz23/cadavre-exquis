@@ -11,7 +11,7 @@ use Doctrine\Persistence\ManagerRegistry;
 class CadavreController extends AbstractController
 {
     #[Route('/cadavre/generator', name: 'app_cadavre')]
-    public function createCadavre(ManagerRegistry $doctrine): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
         $list_sujet = $doctrine->getRepository(Francais::class)->findBy(
             ['fonction' => 'sujet']
@@ -41,12 +41,24 @@ class CadavreController extends AbstractController
         $k = random_int(0, $c-1);
         $complement = $list_complement[$k];
 
+        $cadavre = $sujet->getGroupeDeMots() . " " . $verbe->getGroupeDeMots() . " " . $complement->getGroupeDeMots();
 
-        return new Response(
-            $sujet->getGroupeDeMots() . " " . $verbe->getGroupeDeMots() . " " . $complement->getGroupeDeMots()
-        );
-        // return $this->render('cadavre/index.html.twig', [
-        //     'controller_name' => 'CadavreController',
-        // ]);
+        // return new Response(
+        //     '<DOCTYPE html>
+        //     <html>
+        //         <head>
+        //             <meta charset="UTF-8">
+        //             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        //             <link href="/../css/style.css" rel="stylesheet">
+        //         </head>
+        //         <body>
+        //             <button class ="btn btn-success mt-1"><a href="http://127.0.0.1:8000/cadavre/generator">Générer un nouveau cadavre exquis</a></button>
+        //             <h1>'. $cadavre . '</h1>
+        //         </body>
+        //     </html>'
+        // );
+        return $this->render('cadavre/index.html.twig', [
+            'cadavre' => $cadavre,
+        ]);
     }
 }

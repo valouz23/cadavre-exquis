@@ -4,8 +4,10 @@ namespace App\Entity;
 
 use App\Repository\CadavreRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: CadavreRepository::class)]
+#[ApiResource]
 class Cadavre
 {
     #[ORM\Id]

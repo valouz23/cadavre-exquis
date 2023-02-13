@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
+// use ApiPlatform\Metadata\ApiResource;
 use App\Repository\FrancaisRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FrancaisRepository::class)]
-#[ApiResource]
+// #[ApiResource]
 class Francais
 {
     #[ORM\Id]

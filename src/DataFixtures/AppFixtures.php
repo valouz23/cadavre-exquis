@@ -89,11 +89,93 @@ class AppFixtures extends Fixture
         $sujet14->setPersonne("6");
         $manager->persist($sujet14);
 
-        
+        $sujet15 = new Francais();
+        $sujet15->setGroupeDeMots("Le catsitter");
+        $sujet15->setFonction("sujet");
+        $sujet15->setPersonne("3");
+        $manager->persist($sujet15);
+
+        $sujet16 = new Francais();
+        $sujet16->setGroupeDeMots("Les amis de mes amis");
+        $sujet16->setFonction("sujet");
+        $sujet16->setPersonne("6");
+        $manager->persist($sujet16);
+
+        $sujet17 = new Francais();
+        $sujet17->setGroupeDeMots("La mère Michelle");
+        $sujet17->setFonction("sujet");
+        $sujet17->setPersonne("3");
+        $manager->persist($sujet17);
+
+        $sujet18 = new Francais();
+        $sujet18->setGroupeDeMots("La baleine bleue");
+        $sujet18->setFonction("sujet");
+        $sujet18->setPersonne("3");
+        $manager->persist($sujet18);
+
+        $sujet19 = new Francais();
+        $sujet19->setGroupeDeMots("Trois informaticiens");
+        $sujet19->setFonction("sujet");
+        $sujet19->setPersonne("6");
+        $manager->persist($sujet19);
+
+        $sujet21 = new Francais();
+        $sujet21->setGroupeDeMots("Il est sympa, mais moi je");
+        $sujet21->setFonction("sujet");
+        $sujet21->setPersonne("1");
+        $manager->persist($sujet21);
+
+        $sujet22 = new Francais();
+        $sujet22->setGroupeDeMots("Nous sommes ici parce que tu");
+        $sujet22->setFonction("sujet");
+        $sujet22->setPersonne("2");
+        $manager->persist($sujet22);
+
+        $sujet23 = new Francais();
+        $sujet23->setGroupeDeMots("Vous et moi");
+        $sujet23->setFonction("sujet");
+        $sujet23->setPersonne("4");
+        $manager->persist($sujet23);
+
+        $sujet24 = new Francais();
+        $sujet24->setGroupeDeMots("Elle et toi, vous");
+        $sujet24->setFonction("sujet");
+        $sujet24->setPersonne("5");
+        $manager->persist($sujet24);
+
+        $sujet25 = new Francais();
+        $sujet25->setGroupeDeMots("Et moi pendant ce temps-la, je");
+        $sujet25->setFonction("sujet");
+        $sujet25->setPersonne("1");
+        $manager->persist($sujet25);
+
+        $sujet26 = new Francais();
+        $sujet26->setGroupeDeMots("D'ailleurs, vous");
+        $sujet26->setFonction("sujet");
+        $sujet26->setPersonne("5");
+        $manager->persist($sujet26);
+
+        $sujet27 = new Francais();
+        $sujet27->setGroupeDeMots("Pourtant on");
+        $sujet27->setFonction("sujet");
+        $sujet27->setPersonne("3");
+        $manager->persist($sujet27);
+
+        $sujet28 = new Francais();
+        $sujet28->setGroupeDeMots("Je pense donc je");
+        $sujet28->setFonction("sujet");
+        $sujet28->setPersonne("1");
+        $manager->persist($sujet28);
+
+        $sujet29 = new Francais();
+        $sujet29->setGroupeDeMots("Je m'en fiche, elle");
+        $sujet29->setFonction("sujet");
+        $sujet29->setPersonne("3");
+        $manager->persist($sujet29);
 
         
 
-        
+
         $verbe1 = new Francais();
         $verbe1->setGroupeDeMots("mange un oignon");
         $verbe1->setFonction("verbe");
@@ -167,10 +249,40 @@ class AppFixtures extends Fixture
         $manager->persist($verbe13);
 
         $verbe14 = new Francais();
-        $verbe14->setGroupeDeMots("perd");
+        $verbe14->setGroupeDeMots("perd la boule");
         $verbe14->setFonction("verbe");
         $verbe14->setPersonne("3");
         $manager->persist($verbe14);
+
+        $verbe15 = new Francais();
+        $verbe15->setGroupeDeMots("entrent dans un bar");
+        $verbe15->setFonction("verbe");
+        $verbe15->setPersonne("6");
+        $manager->persist($verbe15);
+
+        $verbe16 = new Francais();
+        $verbe16->setGroupeDeMots("cherche de l'eau");
+        $verbe16->setFonction("verbe");
+        $verbe16->setPersonne("3");
+        $manager->persist($verbe16);
+
+        $verbe17 = new Francais();
+        $verbe17->setGroupeDeMots("ronronne à mon oreille");
+        $verbe17->setFonction("verbe");
+        $verbe17->setPersonne("3");
+        $manager->persist($verbe17);
+
+        $verbe18 = new Francais();
+        $verbe18->setGroupeDeMots("rentrons les poubelles");
+        $verbe18->setFonction("verbe");
+        $verbe18->setPersonne("4");
+        $manager->persist($verbe18);
+
+        $verbe19 = new Francais();
+        $verbe19->setGroupeDeMots("fait des frites");
+        $verbe19->setFonction("verbe");
+        $verbe19->setPersonne("3");
+        $manager->persist($verbe19);
 
 
 
@@ -239,6 +351,31 @@ class AppFixtures extends Fixture
         $complement14->setGroupeDeMots("en observant les massifs montagneux");
         $complement14->setFonction("complement");
         $manager->persist($complement14);
+
+        $complement15 = new Francais();
+        $complement15->setGroupeDeMots("derrière le mouton");
+        $complement15->setFonction("complement");
+        $manager->persist($complement15);
+
+        $complement16 = new Francais();
+        $complement16->setGroupeDeMots("gaiement");
+        $complement16->setFonction("complement");
+        $manager->persist($complement16);
+
+        $complement17 = new Francais();
+        $complement17->setGroupeDeMots("au-dessus de l'aquarium");
+        $complement17->setFonction("complement");
+        $manager->persist($complement17);
+
+        $complement18 = new Francais();
+        $complement18->setGroupeDeMots("sans ménagement");
+        $complement18->setFonction("complement");
+        $manager->persist($complement18);
+
+        $complement19 = new Francais();
+        $complement19->setGroupeDeMots("avec ardeur");
+        $complement19->setFonction("complement");
+        $manager->persist($complement19);
 
         $manager->flush();
     }

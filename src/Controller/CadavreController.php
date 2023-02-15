@@ -10,7 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class CadavreController extends AbstractController
 {
-    #[Route('/cadavre/generator', name: 'app_cadavre')]
+    #[Route('/', name: 'app_cadavre')]
     public function index(ManagerRegistry $doctrine): Response
     {
         $list_sujet = $doctrine->getRepository(Francais::class)->findBy(

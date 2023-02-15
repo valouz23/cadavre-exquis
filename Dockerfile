@@ -23,10 +23,12 @@ COPY . /var/www
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 
+COPY docker.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker.sh
+ENTRYPOINT ["bash", "/usr/local/bin/docker.sh"]
+
 WORKDIR /var/www
 
 RUN composer install
-
-ENTRYPOINT ["bash", "./docker.sh"]
 
 EXPOSE 80

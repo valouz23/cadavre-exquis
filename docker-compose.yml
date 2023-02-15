@@ -2,9 +2,11 @@ version: '3'
 services:
   symfony:
     build: .
-    container_name: cadavre-exquis
+    container_name: cadavre
+    environment:
+      DATABASE_URL: mysql://root:password@database/cadavre?serverVersion=8&charset=utf8mb4
     ports:
-      - "8080:80"
+      - "8000:80"
     networks:
       - dev
 ###> doctrine/doctrine-bundle ###
@@ -12,7 +14,7 @@ services:
     image: 'mysql:latest'
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: cadavre-exquis
+      MYSQL_DATABASE: cadavre
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
@@ -20,7 +22,7 @@ services:
       # For example, to allow the host to connect to port 3306 on the container, you would change
       # "3306" to "3306:3306". Where the first port is exposed to the host and the second is the container port.
       # See https://docs.docker.com/compose/compose-file/compose-file-v3/#ports for more information.
-      - '127.0.0.1::3306'
+      - '3306'
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###

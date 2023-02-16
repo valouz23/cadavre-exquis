@@ -43,20 +43,6 @@ class CadavreController extends AbstractController
 
         $cadavre = $sujet->getGroupeDeMots() . " " . $verbe->getGroupeDeMots() . " " . $complement->getGroupeDeMots();
 
-        // return new Response(
-        //     '<DOCTYPE html>
-        //     <html>
-        //         <head>
-        //             <meta charset="UTF-8">
-        //             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        //             <link href="/../css/style.css" rel="stylesheet">
-        //         </head>
-        //         <body>
-        //             <button class ="btn btn-success mt-1"><a href="http://127.0.0.1:8000/cadavre/generator">Générer un nouveau cadavre exquis</a></button>
-        //             <h1>'. $cadavre . '</h1>
-        //         </body>
-        //     </html>'
-        // );
         return $this->render('cadavre/index.html.twig', [
             'cadavre' => $cadavre,
         ]);
